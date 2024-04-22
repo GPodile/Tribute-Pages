@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-*{
+body {
     background-color: black;
     color: white;
 }
@@ -24,11 +24,13 @@
 }
 
 img {
-    margin:50px 400px;
+    max-width: 100%; /* Make sure the image doesnt overflow its container*/
+    height: auto; /* Maitain aspect ratio*/
 }
 
+
 .description{
-    width: 1300px;
+    max-width: 100%; /* Make the description responsive*/
     margin: 0 auto;
     font-size: 25px;
     border: 1px solid red;
@@ -56,3 +58,20 @@ img {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Responsive style for smaller screen*/
+@media (max-width: 768px) {
+
+    .title{
+        font-size: 30px; /* Decrease font size for smaller screens */
+    }
+
+    .name {
+        font-size: 40px; /* Decrease font size for smaller screens */
+    }
+
+    .description,
+    .info {
+        padding: 20px; /* Decrease padding for smaller screens */
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+}
